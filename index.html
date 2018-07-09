@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Create a New Pen</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div id="input"></div>
+<br/>
+<div id="output"></div>
+
+<hr/>
+
+<label>Width<input id="w" type="range" min=1 max=256 step=1 value=128 width=256></input></label>
+<label>Height<input id="h" type="range" min=1 max=256 step=1 value=128 width=256></input></label>
+
+<label>Number of Filters K<input id="k" type="range" min=4 max=128 step=4 value=4></input></label>
+<label>Spatial Extent F<input id="f" type="range" min=1 max=9 step=1 value=3></input></label>
+<label>Stride S<input id="s" type="range" min=1 max=10 step=1 value=1></input></label>
+
+<label>Zero Padding P<input id="p" type="range" min=0 max=8 step=0 value=0></input></label>
+  
+    <script src="js/index.js"></script>
+
+</body>
+</html>
