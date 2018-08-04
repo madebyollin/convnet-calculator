@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: black;
+  text-decoration: none;
+  font-family: "Palatino", sans-serif;
+  font-size: 16px;
+  line-height: 1.5; }
+
+*::selection {
+  background: rgba(24, 137, 245, 0.2); }
+
+a {
+  font-weight: 500;
+  color: #1889f5;
+  font-size: inherit;
+  transition: 0.2s ease all;
+  cursor: pointer; }
+  a:hover {
+    background: rgba(24, 137, 245, 0.2);
+    color: #0230b2;
+    text-decoration: none; }
+
+body,
+html {
+  background: white; }
+
+p {
+  color: rgba(0, 0, 0, 0.9);
+  margin: 1em 0; }
+
+h1 {
+  width: 100%;
+  display: block;
+  padding: 1em;
+  text-align: center;
+  font-size: 4em;
+  font-weight: 100; }
+
+h2 {
+  font-size: 1.5em;
+  text-align: left;
+  margin-bottom: 8px;
+  font-weight: 600; }
+
+h3 {
+  font-size: 1.1em;
+  text-align: left;
+  margin-bottom: 16px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-weight: 600; }
+
+h4 {
+  font-size: 1em;
+  text-align: left;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  padding-top: 8px;
+  font-weight: 600; }
+
+hr {
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 1em 0; }
+
+main {
+  width: 50%;
+  min-width: 640px;
+  margin: 0 auto;
+  position: relative; }
+
+img {
+  max-width: 100%;
+  margin: 1em auto;
+  border-radius: 0.5em; }
+
+code {
+  color: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: -4px;
+  padding: 2px 4px;
+  margin-left: 2px;
+  margin-right: 2px;
+  font-size: 0.9em;
+  white-space: nowrap;
+  font-family: "Fira Code", "Inconsolata", monospace;
+  user-select: all; }
+
+pre {
+  padding-left: 1em;
+  line-height: 1.5;
+  margin-bottom: 1em;
+  overflow: scroll;
+  font-family: "Fira Code", "Inconsolata", monospace;
+  border-left: 2px solid rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.05); }
+
+blockquote {
+  padding-left: 1em;
+  line-height: 1.5;
+  margin: 1em 0;
+  color: rgba(0, 0, 0, 0.9);
+  border-left: 2px solid rgba(0, 0, 0, 0.1); }
+
+ul {
+  list-style-type: disc;
+  margin-left: 2em; }
+
+ol {
+  list-style-type: decimal;
+  margin-left: 2em; }
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  width: 100%; }
+  table img {
+    width: auto;
+    height: auto; }
+
+td {
+  text-align: left;
+  padding: 1em;
+  color: rgba(0, 0, 0, 0.9); }
+
+th {
+  padding: 1em;
+  color: black;
+  background: rgba(0, 0, 0, 0.05); }
+
+/* ******** Footnotes ******** */
+.footnote {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 0.9rem; }
+
+.footnote:hover {
+  position: absolute;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 16px -4px rgba(0, 0, 0, 0.5);
+  width: auto;
+  height: auto;
+  max-width: 400px;
+  padding: 8px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+  margin: -8px;
+  z-index: 100; }
+
+.footnote:before {
+  content: "\00a0 * \00a0";
+  color: #1889f5;
+  display: inline;
+  font-size: 1rem; }
+
+body {
+  padding: 16px; }
+
+h1 {
+  font-size: 32px; }
+
+h4 {
+  position: absolute;
+  left: 0;
+  font-variant: small-caps;
+  transform: translateX(-100%);
+  padding-right: 1em;
+  opacity: 0.5; }
+
+#parameters {
+  position: relative;
+  text-align: left;
+  margin-bottom: 4em; }
+
+label {
+  padding: 8px 16px;
+  margin: 8px;
+  margin-bottom: 16px;
+  height: 3.5em;
+  vertical-align: bottom;
+  border-radius: 4px;
+  font-size: 1rem;
+  text-align: center;
+  white-space: nowrap;
+  flex: 1; }
+  label em {
+    line-height: 1.8em; }
+    label em::after {
+      content: "=";
+      opacity: 0.5;
+      margin-left: 4px; }
+  label .value {
+    display: inline-block;
+    width: 3em;
+    border: 0;
+    -webkit-appearance: none;
+    margin-left: 0;
+    margin-right: -2em; }
+    label .value:focus {
+      -webkit-appearance: none;
+      outline: none;
+      box-shadow: none; }
+  label input {
+    width: 100%;
+    margin-top: 8px;
+    display: block; }
+
+#input_parameters, #convolution_parameters {
+  display: flex; }
+
+#shapes {
+  position: relative;
+  min-width: 512px;
+  top: 2em; }
+  #shapes #arrow {
+    font-size: 1.5rem;
+    font-family: "Fira Code", "Inconsolata", monospace;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    user-select: none;
+    top: 96px;
+    width: 100%;
+    position: absolute; }
+  #shapes #input,
+  #shapes #output {
+    padding: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1.5rem 4px 4px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 192px;
+    height: 192px;
+    position: relative;
+    display: flex; }
+    #shapes #input span,
+    #shapes #output span {
+      font-size: inherit; }
+    #shapes #input::before,
+    #shapes #output::before {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-align: center;
+      width: 100%;
+      padding-bottom: 4px;
+      transform: translateY(-100%);
+      font-size: 1rem; }
+  #shapes #input {
+    float: left; }
+    #shapes #input::before {
+      content: "Input"; }
+  #shapes #output {
+    float: right; }
+    #shapes #output::before {
+      content: "Output After Convolution"; }
+
+#credits {
+  text-align: center;
+  padding-top: 4em;
+  clear: both; }
+
+em {
+  font-style: normal;
+  display: inline-block;
+  font-size: inherit;
+  padding: 0 4px; }
+  em * {
+    font-family: inherit;
+    color: inherit; }
+
+.w1 em,
+.w1 input {
+  color: #d11f04; }
+
+.h1 em,
+.h1 input {
+  color: #c004b2; }
+
+.d1 em,
+.d1 input {
+  color: #6604c0; }
+
+.k em,
+.k input {
+  color: #1889f5; }
+
+.f em,
+.f input {
+  color: #ff8100; }
+
+.s em,
+.s input {
+  color: #51af00; }
+
+.p em,
+.p input {
+  color: #00bcd4; }
+
+/*# sourceMappingURL=project.css.map */

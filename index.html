@@ -1,33 +1,43 @@
 <!DOCTYPE html>
-<html >
-<head>
-  <meta charset="UTF-8">
-  <title>Create a New Pen</title>
-  
-  
-  
-      <link rel="stylesheet" href="css/style.css">
+<html lang="en">
 
-  
+<head>
+    <title>ConvNet Shape Calculator</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/project.css">
+    <script src="js/main.js" charset="utf-8"></script>
 </head>
 
 <body>
-  <div id="input"></div>
-<br/>
-<div id="output"></div>
-
-<hr/>
-
-<label>Width<input id="w" type="range" min=1 max=256 step=1 value=128 width=256></input></label>
-<label>Height<input id="h" type="range" min=1 max=256 step=1 value=128 width=256></input></label>
-
-<label>Number of Filters K<input id="k" type="range" min=4 max=128 step=4 value=4></input></label>
-<label>Spatial Extent F<input id="f" type="range" min=1 max=9 step=1 value=3></input></label>
-<label>Stride S<input id="s" type="range" min=1 max=10 step=1 value=1></input></label>
-
-<label>Zero Padding P<input id="p" type="range" min=0 max=8 step=0 value=0></input></label>
-  
-    <script src="js/index.js"></script>
-
+    <main>
+        <h1>ConvNet Calculator</h1>
+        <div id="parameters">
+            <h4>Input</h4>
+            <div id="input_parameters">
+                <label class="w1">Width <em>W<sub>1</sub></em><input type="range" min=1 max=256 step=1 value=128 width=256></input></label>
+                <label class="h1">Height <em>H<sub>1</sub></em><input type="range" min=1 max=256 step=1 value=128 width=256></input></label>
+                <label class="d1">Channels <em>D<sub>1</sub></em><input type="range" min=1 max=256 step=1 value=128 width=256></input></label>
+            </div>
+            <h4>Convolution</h4>
+            <div id="convolution_parameters">
+                <label class="k">Filter Count <em>K</em><input type="range" min=4 max=128 step=4 value=4></input></label>
+                <label class="f">Spatial Extent <em>F</em><input type="range" min=1 max=9 step=1 value=3></input></label>
+                <label class="s">Stride <em>S</em><input type="range" min=1 max=10 step=1 value=1></input></label>
+                <label class="p">Zero Padding <em>P</em><input type="range" min=0 max=8 step=0 value=0></input></label>
+            </div>
+        </div>
+        <h4>Shapes</h4>
+        <div id="shapes">
+            <div id="input"></div>
+            <div id="arrow">→</div>
+            <div id="output"></div>
+        </div>
+        <div id="credits">
+            For more context, see the <a href="http://cs231n.github.io/convolutional-networks/" target="_blank">CS231n course notes</a> (search for "Summary").
+        </div>
+    </main>
 </body>
+
 </html>
