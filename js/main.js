@@ -40,12 +40,17 @@ function main() {
         value_el.classList.add("value");
         label.insertBefore(value_el, variable_sliders[i]);
         let slider_el = variable_sliders[i];
-        let update = () => {
+        let slider_update = () => {
             value_el.value = slider_el.value;
             update_input_output();
         };
-        slider_el.addEventListener("input", update);
-        update();
+        let ticker_update = () => {
+            slider_el.value = value_el.value;
+            update_input_output();
+        };
+        slider_el.addEventListener("input", slider_update);
+        value_el.addEventListener("input", ticker_update);
+        slider_update();
     });
 }
 window.onload = main;
