@@ -54,11 +54,17 @@ function main() {
             update_input_output();
         };
         let ticker_update = () => {
+            // if ticker exceeds slider max, slider adjusts
             if (parseInt(value_el.value) > parseInt(slider_el.max))
             {
                 slider_el.max = parseInt(value_el.value);
             }
             slider_el.value = value_el.value;
+            // if ticker exceeds slider min, ticker adjusts
+            if (parseInt(value_el.value) < slider_el.value)
+            {
+                value_el.value = slider_el.value;
+            }
             update_input_output();
         };
         slider_el.addEventListener("input", slider_update);
