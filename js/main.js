@@ -1,6 +1,7 @@
 function main() {
     let input_el = document.getElementById("input");
     let output_el = document.getElementById("output");
+    let message_el = document.getElementById("message");
     let variable_labels = Array.from(document.querySelectorAll("label"));
     let variable_sliders = variable_labels.map(x => x.querySelector("input"));
     let variable_names = variable_labels.map(x => x.classList[0]);
@@ -19,19 +20,27 @@ function main() {
         input_el.innerHTML = `${wrap_em("w1", v.w1.value)}×
                               ${wrap_em("h1", v.h1.value)}×
                               ${wrap_em("d1", v.d1.value)}`;
-        var w2 = (v.w1.value - v.f.value + 2 * v.p.value) / v.s.value + 1;
-        var h2 = (v.h1.value - v.f.value + 2 * v.p.value) / v.s.value + 1;
+        var w2 = Math.floor((v.w1.value - v.f.value + 2 * v.p.value) / v.s.value + 1);
+        var h2 = Math.floor((v.h1.value - v.f.value + 2 * v.p.value) / v.s.value + 1);
 
-        if (!Number.isInteger(w2)) {
+        let message = "";
+        if (w2 < 1 || h2 < 1)
+        {
+            message = "Spatial extent can't be greater than padded input size. Increase P, increase H<sub>1</sub> / W<sub>1</sub>, or reduce F.";
+        } else if (!Number.isInteger(w2) || !Number.isInteger(h2)) {
+        }
+
+        if (!Number.isInteger(w2) || w2 <= 0) {
             w2 = "❓";
         }
-        if (!Number.isInteger(h2)) {
+        if (!Number.isInteger(h2) || h2 <= 0) {
             h2 = "❓";
         }
 
         output_el.innerHTML = `${wrap_em("w2", w2)}×
                               ${wrap_em("h2", h2)}×
                               ${wrap_em("k", v.k.value)}`;
+        message_el.innerHTML = message;
     }
 
     variable_labels.forEach((label, i) => {
@@ -45,6 +54,10 @@ function main() {
             update_input_output();
         };
         let ticker_update = () => {
+            if (parseInt(value_el.value) > parseInt(slider_el.max))
+            {
+                slider_el.max = parseInt(value_el.value);
+            }
             slider_el.value = value_el.value;
             update_input_output();
         };

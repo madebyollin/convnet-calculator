@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i");
 * {
   box-sizing: border-box;
@@ -7,29 +8,35 @@
   text-decoration: none;
   font-family: "Palatino", sans-serif;
   font-size: 16px;
-  line-height: 1.5; }
+  line-height: 1.5;
+}
 
 *::selection {
-  background: rgba(24, 137, 245, 0.2); }
+  background: rgba(24, 137, 245, 0.2);
+}
 
 a {
   font-weight: 500;
   color: #1889f5;
   font-size: inherit;
   transition: 0.2s ease all;
-  cursor: pointer; }
-  a:hover {
-    background: rgba(24, 137, 245, 0.2);
-    color: #0230b2;
-    text-decoration: none; }
+  cursor: pointer;
+}
+a:hover {
+  background: rgba(24, 137, 245, 0.2);
+  color: #0230b2;
+  text-decoration: none;
+}
 
 body,
 html {
-  background: white; }
+  background: white;
+}
 
 p {
   color: rgba(0, 0, 0, 0.9);
-  margin: 1em 0; }
+  margin: 1em 0;
+}
 
 h1 {
   width: 100%;
@@ -37,13 +44,15 @@ h1 {
   padding: 1em;
   text-align: center;
   font-size: 4em;
-  font-weight: 100; }
+  font-weight: 100;
+}
 
 h2 {
   font-size: 1.5em;
   text-align: left;
   margin-bottom: 8px;
-  font-weight: 600; }
+  font-weight: 600;
+}
 
 h3 {
   font-size: 1.1em;
@@ -51,7 +60,8 @@ h3 {
   margin-bottom: 16px;
   padding-top: 8px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  font-weight: 600; }
+  font-weight: 600;
+}
 
 h4 {
   font-size: 1em;
@@ -59,23 +69,27 @@ h4 {
   margin-top: 16px;
   margin-bottom: 8px;
   padding-top: 8px;
-  font-weight: 600; }
+  font-weight: 600;
+}
 
 hr {
   border: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  margin: 1em 0; }
+  margin: 1em 0;
+}
 
 main {
   width: 50%;
   min-width: 640px;
   margin: 0 auto;
-  position: relative; }
+  position: relative;
+}
 
 img {
   max-width: 100%;
   margin: 1em auto;
-  border-radius: 0.5em; }
+  border-radius: 0.5em;
+}
 
 code {
   color: rgba(0, 0, 0, 0.9);
@@ -88,7 +102,8 @@ code {
   font-size: 0.9em;
   white-space: nowrap;
   font-family: "Fira Code", "Inconsolata", monospace;
-  user-select: all; }
+  user-select: all;
+}
 
 pre {
   padding-left: 1em;
@@ -97,41 +112,49 @@ pre {
   overflow: scroll;
   font-family: "Fira Code", "Inconsolata", monospace;
   border-left: 2px solid rgba(0, 0, 0, 0.1);
-  background: rgba(0, 0, 0, 0.05); }
+  background: rgba(0, 0, 0, 0.05);
+}
 
 blockquote {
   padding-left: 1em;
   line-height: 1.5;
   margin: 1em 0;
   color: rgba(0, 0, 0, 0.9);
-  border-left: 2px solid rgba(0, 0, 0, 0.1); }
+  border-left: 2px solid rgba(0, 0, 0, 0.1);
+}
 
 ul {
   list-style-type: disc;
-  margin-left: 2em; }
+  margin-left: 2em;
+}
 
 ol {
   list-style-type: decimal;
-  margin-left: 2em; }
+  margin-left: 2em;
+}
 
 table {
   margin: 1em auto;
   border-collapse: collapse;
   border: 2px solid rgba(0, 0, 0, 0.1);
-  width: 100%; }
-  table img {
-    width: auto;
-    height: auto; }
+  width: 100%;
+}
+table img {
+  width: auto;
+  height: auto;
+}
 
 td {
   text-align: left;
   padding: 1em;
-  color: rgba(0, 0, 0, 0.9); }
+  color: rgba(0, 0, 0, 0.9);
+}
 
 th {
   padding: 1em;
   color: black;
-  background: rgba(0, 0, 0, 0.05); }
+  background: rgba(0, 0, 0, 0.05);
+}
 
 /* ******** Footnotes ******** */
 .footnote {
@@ -142,7 +165,8 @@ th {
   height: 1em;
   overflow: hidden;
   cursor: pointer;
-  font-size: 0.9rem; }
+  font-size: 0.9rem;
+}
 
 .footnote:hover {
   position: absolute;
@@ -156,19 +180,23 @@ th {
   padding-right: 12px;
   padding-bottom: 12px;
   margin: -8px;
-  z-index: 100; }
+  z-index: 100;
+}
 
 .footnote:before {
-  content: "\00a0 * \00a0";
+  content: " *  ";
   color: #1889f5;
   display: inline;
-  font-size: 1rem; }
+  font-size: 1rem;
+}
 
 body {
-  padding: 16px; }
+  padding: 16px;
+}
 
 h1 {
-  font-size: 32px; }
+  font-size: 32px;
+}
 
 h4 {
   position: absolute;
@@ -176,12 +204,14 @@ h4 {
   font-variant: small-caps;
   transform: translateX(-100%);
   padding-right: 1em;
-  opacity: 0.5; }
+  opacity: 0.5;
+}
 
 #parameters {
   position: relative;
   text-align: left;
-  margin-bottom: 4em; }
+  margin-bottom: 4em;
+}
 
 label {
   padding: 8px 16px;
@@ -193,123 +223,182 @@ label {
   font-size: 1rem;
   text-align: center;
   white-space: nowrap;
-  flex: 1; }
-  label em {
-    line-height: 1.8em; }
-    label em::after {
-      content: "=";
-      opacity: 0.5;
-      margin-left: 4px; }
-  label .value {
-    display: inline-block;
-    width: 3em;
-    border: 0;
-    -webkit-appearance: none;
-    margin-left: 0;
-    margin-right: -2em; }
-    label .value:focus {
-      -webkit-appearance: none;
-      outline: none;
-      box-shadow: none; }
-  label input {
-    width: 100%;
-    margin-top: 8px;
-    display: block; }
+  flex: 1;
+}
+label em {
+  line-height: 1.8em;
+}
+label em::after {
+  content: "=";
+  opacity: 0.5;
+  margin-left: 4px;
+}
+label .value {
+  display: inline-block;
+  width: 3em;
+  border: 0;
+  -webkit-appearance: none;
+  margin-left: 0;
+  margin-right: -2em;
+}
+label .value:focus {
+  -webkit-appearance: none;
+  outline: none;
+  box-shadow: none;
+}
+label input {
+  width: 100%;
+  margin-top: 8px;
+  display: block;
+}
 
 #input_parameters, #convolution_parameters {
-  display: flex; }
+  display: flex;
+}
+
+#message {
+  margin-top: 2em;
+  color: red;
+}
+#message * {
+  color: red;
+}
 
 #shapes {
   position: relative;
   min-width: 512px;
-  top: 2em; }
-  #shapes #arrow {
-    font-size: 1.5rem;
-    font-family: "Fira Code", "Inconsolata", monospace;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    user-select: none;
-    top: 96px;
-    width: 100%;
-    position: absolute; }
-  #shapes #input,
-  #shapes #output {
-    padding: 4px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    font-size: 1.5rem;
-    text-align: center;
-    margin: 1.5rem 4px 4px;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    width: 192px;
-    height: 192px;
-    position: relative;
-    display: flex; }
-    #shapes #input span,
-    #shapes #output span {
-      font-size: inherit; }
-    #shapes #input::before,
-    #shapes #output::before {
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      text-align: center;
-      width: 100%;
-      padding-bottom: 4px;
-      transform: translateY(-100%);
-      font-size: 1rem; }
-  #shapes #input {
-    float: left; }
-    #shapes #input::before {
-      content: "Input"; }
-  #shapes #output {
-    float: right; }
-    #shapes #output::before {
-      content: "Output After Convolution"; }
+  top: 2em;
+}
+#shapes #arrow {
+  font-size: 1.5rem;
+  font-family: "Fira Code", "Inconsolata", monospace;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  user-select: none;
+  top: 96px;
+  width: 100%;
+  position: absolute;
+}
+#shapes #input,
+#shapes #output {
+  padding: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 1.5rem 4px 4px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 192px;
+  height: 192px;
+  position: relative;
+  display: flex;
+}
+#shapes #input span,
+#shapes #output span {
+  font-size: inherit;
+}
+#shapes #input::before,
+#shapes #output::before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 4px;
+  transform: translateY(-100%);
+  font-size: 1rem;
+}
+#shapes #input em::before,
+#shapes #output em::before {
+  position: relative;
+  display: block;
+  font-size: 0.5rem;
+}
+#shapes #input {
+  float: left;
+}
+#shapes #input::before {
+  content: "Input";
+}
+#shapes #output {
+  float: right;
+}
+#shapes #output::before {
+  content: "Output After Convolution";
+}
 
 #credits {
   text-align: center;
   padding-top: 4em;
-  clear: both; }
+  clear: both;
+}
 
 em {
   font-style: normal;
   display: inline-block;
   font-size: inherit;
-  padding: 0 4px; }
-  em * {
-    font-family: inherit;
-    color: inherit; }
+  padding: 0 4px;
+}
+em * {
+  font-family: inherit;
+  color: inherit;
+}
 
 .w1 em,
 .w1 input {
-  color: #d11f04; }
+  color: #d11f04;
+}
 
 .h1 em,
 .h1 input {
-  color: #c004b2; }
+  color: #c004b2;
+}
 
 .d1 em,
 .d1 input {
-  color: #6604c0; }
+  color: #6604c0;
+}
 
 .k em,
 .k input {
-  color: #1889f5; }
+  color: #1889f5;
+}
 
 .f em,
 .f input {
-  color: #ff8100; }
+  color: #ff8100;
+}
 
 .s em,
 .s input {
-  color: #51af00; }
+  color: #51af00;
+}
 
 .p em,
 .p input {
-  color: #00bcd4; }
+  color: #00bcd4;
+}
+
+#shapes .w1 em::before {
+  content: "Width";
+}
+#shapes .h1 em::before {
+  content: "Height";
+}
+#shapes .d1 em::before {
+  content: "Channels";
+}
+#shapes .w2 em::before {
+  content: "Width";
+}
+#shapes .h2 em::before {
+  content: "Height";
+}
+#shapes .k em::before {
+  content: "Channels";
+}
 
 /*# sourceMappingURL=project.css.map */
